@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div style="text-align:center">
+      <h1> Video Player </h1>
+      <video id="video1" width="420" controls>
+        <source src="Instagram Password Bug.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+      <br><br>
+
+      <button onclick="makeBig()">Increase Size</button>
+      <button onclick="makeSmall()">Decrease Size </button>
+      <button onclick="makeNormal()">Normal</button>
+
+      <br><br><hr>
+
+      <h1> Audio Player </h1>
+
+      <audio controls>
+        <source src="Mera Jahan.mp3" type="audio/mpeg">
+      </audio>
+
+    </div>
+
+    <script>
+      var myVideo = document.getElementById("video1");
+
+      function makeBig() {
+
+          if(myVideo.width > 600)
+            return;
+
+          myVideo.width += 50;
+      }
+      function makeSmall(){
+        if(myVideo.width < 300)
+          return;
+        myVideo.width -= 50;
+      }
+      function makeNormal(){
+        myVideo.width = 420;
+      }
+
+    </script>
+  </body>
+</html>
