@@ -10,13 +10,9 @@ div {
 }
 </style>
 <script>
-function allowDrop(ev) {
-    ev.preventDefault();
-}
 
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
-
 }
 
 function drop(ev) {
@@ -24,14 +20,18 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
+
 </script>
 </head>
 <body>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ondragover="event.stopPropagation(); ev.preventDefault();"></div>
+<div id="div1" ondrop="drop(event)" ondragover="event.preventDefault();"></div>
 <br>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ondragover="event.stopPropagation();ev.preventDefault();">
-<img id="drag1" src=" drag.PNG" draggable="true" ondragstart="drag(event)" width="100px" height+"auto">
+
+<div id="div1" ondrop="drop(event)" ondragover="event.preventDefault();">
+
+<img id="drag1" src=" drag.PNG" draggable="true" ondragstart="drag(event)" width="100px" height="auto">
+
 </div>
 </body>
 </html>
