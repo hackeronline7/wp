@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>HTML 5</title>
+	<style>
+		input{
+			margin-top: 5px;
+			margin-bottom: 1px;
+			width: 100%;
+		}
+
+		svg{
+			width: 200px;
+			height: 200px;
+		}
+
+		.container{
+			display: inline-block;
+			width: 24%;
+			border-right: 1px solid black;
+			text-align: center;
+			height: 300px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1> Shapes </h1>
+
+	<div class="container">
+	<h3> Circle</h3>
+	<svg>
+	 <circle cx="100" cy="100" r="50" style="fill:dodgerblue; stroke-width:5; stroke:black" />
+	</svg>
+	</div>
+
+	<div class="container">
+	<h3> Square <h3>
+	<svg>
+	<rect x="50" y="50" width="100" height="100" style="fill:dodgerblue; stroke-width:5; stroke:black">
+	</svg>
+	</div>
+
+	<div class="container">
+	<h3> Rounded Square <h3>
+	<svg>
+	<rect x="50" y="50" rx="10" ry="10" width="100" height="100" style="fill:dodgerblue; stroke-width:5; stroke:black" >
+	</svg>
+	</div>
+
+	<div class="container" style="border-right: 0px">
+	<h3> Ellipse <h3>
+	<svg>
+	  <ellipse cx="100" cy="100" rx="80" ry="40" style="fill:dodgerblue; stroke-width:5; stroke:black" />
+	</svg>
+	</div>
+
+</body>
+</html>
