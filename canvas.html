@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+  canvas{
+  width: 19.5%;
+  height: 100;
+  border:1px solid #000000;
+  }
+  </style>
+</head>
+
+<body>
+
+  <canvas id="myCanvas"> </canvas>
+
+  <canvas id="myCanvas1"> </canvas>
+
+  <canvas id="myCanvas2"> </canvas>
+
+  <canvas id="myCanvas3"> </canvas>
+
+  <canvas id="myCanvas4"> </canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(500,250);
+    ctx.stroke();
+
+    c = document.getElementById("myCanvas2");
+    ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(150,75,50,0,2*Math.PI);
+    ctx.stroke();
+
+    c = document.getElementById("myCanvas3");
+    ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World",10,50);
+
+    c = document.getElementById("myCanvas4");
+    ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.strokeText("Hello World",10,50);
+  </script>
+</body>
+</html>
