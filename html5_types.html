@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>HTML 5</title>
+	<style>
+		input{
+			margin-top: 5px;
+			margin-bottom: 1px;
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1> Form Inputs </h2>
+
+	<form style="width: 500px;">
+		Select Even Number :-
+			<input type="number" min="0" max="20" step="2" value="10" name="some-name"><br>
+		Select Range:-
+			<input type="range" name="points" min="0" max="10"><br>
+		Week
+		<input type="week" name="year_week"><br>
+		Time
+		 <input type="time" name="time">
+		 Date
+		<input type="date" name="date"><br>
+		Color
+		<input type="color" name="color"/> <br>
+		list
+		<input type="text" list="myList" placeholder="select value">
+		<datalist id="myList">
+		<option label="1" value="v1">
+		<option label="2" value="v2">
+		<option label="3" value="v3">
+		</datalist>
+		<br>
+		Patterns
+		<input type="text" pattern="[0-9]{10}" reruired name="pattern">
+		<br>
+		Add your homepage:
+		<input type="url" name="homepage">
+		<br>
+		Month
+		<input type="month" name="bdaymonth">
+		<br>
+		<input type="submit" name="dd">
+	</form>
+</body>
+</html>
