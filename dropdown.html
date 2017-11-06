@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <title>Dropdown</title>	
+		<style>
+			body{
+				margin: 0px;
+				padding; 0px;
+			}
+
+			nav{
+				background: #2f3036;
+				height: 40px;
+				width: 100%;
+			}
+
+			ul{
+				width: 100%;
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+				position: absolute;
+			}
+
+			li{
+				width: 20%;
+				display: inline-block;
+				float: left;
+			}
+
+			li a{
+				width: 100%;
+				display: block;
+				height: 40px;
+				text-decoration: none;
+				color: #fff;
+				line-height: 40px;
+				text-align: center;
+			}
+
+			li ul{
+				display: none;
+			}
+
+			li ul li{
+				margin-top: 1px;
+				display: block;
+				float: none;
+			}
+
+
+			li:hover a {
+				background: #19c589;
+			}
+
+			li:hover ul a {
+				background: #f3f3f3;
+				color: #2f3036;
+			}
+
+
+			li:hover ul a:hover {
+				background: #19c589;
+				color: #fff;
+			}
+
+			ul li a:hover + .hidden, .hidden:hover {
+				display: block;
+			}
+
+			#overlay {
+				position: fixed;
+				display: none;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 2;
+				cursor: pointer;
+			}
+
+			button{
+			  margin-top: 20px;
+			  width: 20%;
+			  height: 40px;
+			}
+		</style>
+	</head>
+
+    <body>
+
+        <div id="overlay" onclick="off()"></div>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a>
+                    <ul class="hidden">
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">What We Do</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Portfolio</a>
+                    <ul class="hidden">
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Web & UI </a></li>
+                        <li><a href="#">Illustration</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+
+        <center>
+          <button onclick="on()"> Turn On Overlay </button>
+        </center>
+        <script>
+        function on() {
+          document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+          document.getElementById("overlay").style.display = "none";
+        }
+        </script>
+
+    </body>
+</html>
